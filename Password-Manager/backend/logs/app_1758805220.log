@@ -1,0 +1,2 @@
+2025-09-25 21:00:20,801 INFO: 密码管家后端启动 [in D:\Code_Decom\Password-plugin\backend\app.py:62]
+2025-09-25 21:00:20,922 INFO: 数据库初始化完成 [in D:\Code_Decom\Password-plugin\backend\utils\db.py:121]

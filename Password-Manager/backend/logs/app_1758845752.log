@@ -1,0 +1,29 @@
+2025-09-26 08:18:16,825 ERROR: Exception on /api/txt_import [POST] [in S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\api\password_routes.py", line 529, in import_txt_passwords
+    return import_passwords(current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: import_passwords() takes 1 positional argument but 2 were given
+2025-09-26 08:18:16,827 INFO: 响应状态: 500 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-26 08:18:16,831 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '265'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]

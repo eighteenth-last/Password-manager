@@ -1,0 +1,78 @@
+在 PasswordsView.vue 中添加浏览器导入功能的集成指南
+====================================================
+
+1. 首先在模板部分的筛选行中添加一个新按钮（在导入TXT按钮旁边）:
+
+```vue
+<el-col :span="8" class="filter-actions">
+  <el-button @click="refreshPasswords" :loading="loading">
+    <el-icon><el-icon-refresh /></el-icon>
+    刷新
+  </el-button>
+  <el-button type="success" @click="syncPasswords" :loading="syncing">
+    <el-icon><el-icon-upload /></el-icon>
+    同步
+  </el-button>
+  <el-button type="primary" @click="showImportDialog" :loading="importing">
+    <el-icon><el-icon-download /></el-icon>
+    导入TXT
+  </el-button>
+  <!-- 新增浏览器导入按钮 -->
+  <el-button type="info" @click="showBrowserImportDialog" :loading="importing">
+    <el-icon><el-icon-chrome /></el-icon>
+    浏览器导入
+  </el-button>
+</el-col>
+```
+
+2. 在模板底部添加新的导入对话框组件:
+
+```vue
+<!-- 浏览器导入对话框 -->
+<BrowserImportDialog
+  v-model:visible="browserImportDialogVisible"
+  @imported="onImportSuccess"
+/>
+```
+
+3. 在 script 部分导入组件:
+
+```js
+import BrowserImportDialog from '../../components/BrowserImportDialog.vue'
+import { ElIconChrome } from '@element-plus/icons-vue' // 确保导入这个图标
+```
+
+4. 添加到引入的图标列表中:
+
+```js
+import {
+  Plus as ElIconPlus,
+  Refresh as ElIconRefresh,
+  Upload as ElIconUpload,
+  Download as ElIconDownload,
+  Chrome as ElIconChrome  // 新增
+} from '@element-plus/icons-vue'
+```
+
+5. 添加新的状态变量:
+
+```js
+const browserImportDialogVisible = ref(false)
+```
+
+6. 添加新的方法:
+
+```js
+// 显示浏览器导入对话框
+const showBrowserImportDialog = () => {
+  browserImportDialogVisible.value = true
+}
+
+// 导入成功处理
+const onImportSuccess = async (count) => {
+  // 重新加载密码列表
+  await passwordsStore.fetchPasswords()
+}
+```
+
+完成以上步骤后，用户将能够点击"浏览器导入"按钮，打开CSV导入对话框，并从Chrome或Edge浏览器导入密码。

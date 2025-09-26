@@ -1,0 +1,117 @@
+2025-09-25 21:49:22,368 INFO: 密码管家后端启动 [in D:\Code_Decom\Password-plugin\backend\app.py:62]
+2025-09-25 21:49:22,490 INFO: 数据库初始化完成 [in D:\Code_Decom\Password-plugin\backend\utils\db.py:121]
+2025-09-25 21:49:27,442 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:27,443 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'GET, OPTIONS, HEAD'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:27,833 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:27,833 INFO: 响应头部: {'Content-Type': 'application/json', 'Content-Length': '109'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:34,597 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:34,597 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Allow': 'POST, OPTIONS'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:35,002 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:35,002 INFO: 响应头部: {'Content-Type': 'application/json', 'Content-Length': '317'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:35,736 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:35,738 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:36,116 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:36,117 INFO: 响应头部: {'Content-Type': 'application/json', 'Content-Length': '2563'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:36,163 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:36,163 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:36,397 INFO: 响应状态: 200 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:36,398 INFO: 响应头部: {'Content-Type': 'application/json', 'Content-Length': '9362'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:49,117 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:49,117 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:49,200 INFO: 响应状态: 201 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:49,201 INFO: 响应头部: {'Content-Type': 'application/json', 'Content-Length': '354'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:56,865 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:56,865 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:49:57,251 ERROR: Exception on /api/txt_import [POST] [in S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\api\password_routes.py", line 529, in import_txt_passwords
+    return import_passwords(current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: import_passwords() takes 1 positional argument but 2 were given
+2025-09-25 21:49:57,254 INFO: 响应状态: 500 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:49:57,255 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '265'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:50:11,896 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:50:11,897 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:50:11,976 ERROR: Exception on /api/txt_import [POST] [in S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\api\password_routes.py", line 529, in import_txt_passwords
+    return import_passwords(current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: import_passwords() takes 1 positional argument but 2 were given
+2025-09-25 21:50:11,978 INFO: 响应状态: 500 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:50:11,979 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '265'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:50:18,048 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:50:18,048 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:50:18,456 ERROR: Exception on /api/txt_import [POST] [in S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "S:\Interpreter-envs\Python3.12.1\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\api\password_routes.py", line 529, in import_txt_passwords
+    return import_passwords(current_user)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Code_Decom\Password-plugin\backend\utils\auth.py", line 88, in decorated
+    return f(current_user, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: import_passwords() takes 1 positional argument but 2 were given
+2025-09-25 21:50:18,458 INFO: 响应状态: 500 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:50:18,458 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '265'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
+2025-09-25 21:50:58,077 INFO: 响应状态: 204 [in D:\Code_Decom\Password-plugin\backend\app.py:42]
+2025-09-25 21:50:58,078 INFO: 响应头部: {'Content-Type': 'text/html; charset=utf-8', 'Content-Length': '0'} [in D:\Code_Decom\Password-plugin\backend\app.py:43]
